@@ -1,5 +1,10 @@
 Up all of them and keep running every 30 seconds
 ```bash
+ansible-playbook etc/ansible/playbook-setup-web-container.yml
+```
+
+Up all of them and keep running every 30 seconds
+```bash
 ./gradlew launchTaskRunners
 ```
 
