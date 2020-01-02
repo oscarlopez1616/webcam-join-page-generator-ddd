@@ -17,7 +17,6 @@ return [
         '/token' => [[['_route' => 'oauth2_token', '_controller' => 'Trikoder\\Bundle\\OAuth2Bundle\\Controller\\TokenController::indexAction'], null, ['POST' => 0], null, false, false, null]],
         '/api/cam_landing_creator/cam_unit' => [[['_route' => 'post_cam_unit', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\CamUnitController::postCamUnit'], null, ['POST' => 0], null, true, false, null]],
         '/api/cam_landing_creator/affiliate' => [[['_route' => 'post_affiliate', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\AffiliateController::postAffiliate'], null, ['POST' => 0], null, true, false, null]],
-        '/api/cam_landing_creator/join_page' => [[['_route' => 'get_join_page', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\JoinPageController::getJoinPage'], null, ['GET' => 0], null, true, false, null]],
         '/api/security_and_acl/user/acl/profile' => [[['_route' => 'user_profile', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getAclUser'], null, ['GET' => 0], null, false, false, null]],
         '/api/security_and_acl/user' => [
             [['_route' => 'post_create_user_action', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::postUserAction'], null, ['POST' => 0], null, true, false, null],
@@ -43,10 +42,13 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/api/security_and_acl/user/(?'
-                    .'|password/([^/]++)/([^/]++)(*:225)'
-                    .'|user_name/([^/]++)(*:251)'
-                    .'|([^/]++)(*:267)'
+                .'|/api/(?'
+                    .'|cam_landing_creator/join_page/([^/]++)(*:215)'
+                    .'|security_and_acl/user/(?'
+                        .'|password/([^/]++)/([^/]++)(*:274)'
+                        .'|user_name/([^/]++)(*:300)'
+                        .'|([^/]++)(*:316)'
+                    .')'
                 .')'
             .')/?$}sD',
     ],
@@ -58,9 +60,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        225 => [[['_route' => 'get_forgot_password', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getPasswordRecoveryAction'], ['passwordRecoveryId', 'userName'], ['GET' => 0], null, false, true, null]],
-        251 => [[['_route' => 'user_id_by_username', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserName'], ['username'], ['GET' => 0], null, true, true, null]],
-        267 => [
+        215 => [[['_route' => 'get_join_page', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\JoinPageController::getJoinPage'], ['id'], ['GET' => 0], null, true, true, null]],
+        274 => [[['_route' => 'get_forgot_password', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getPasswordRecoveryAction'], ['passwordRecoveryId', 'userName'], ['GET' => 0], null, false, true, null]],
+        300 => [[['_route' => 'user_id_by_username', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserName'], ['username'], ['GET' => 0], null, true, true, null]],
+        316 => [
             [['_route' => 'user_by_user_id', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserId'], ['userId'], ['GET' => 0], null, true, true, null],
             [null, null, null, null, false, false, 0],
         ],

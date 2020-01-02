@@ -2226,9 +2226,7 @@
       <argument type="service" id=".service_locator.6zQlgQt"/>
     </service>
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
-      <argument type="iterator">
-        <argument type="service" id="security.authentication.provider.oauth2.api"/>
-      </argument>
+      <argument type="iterator"/>
       <argument>true</argument>
       <call method="setEventDispatcher">
         <argument type="service" id="debug.event_dispatcher"/>
@@ -2645,9 +2643,7 @@
     <service id="security.authentication.guard_handler" class="Symfony\Component\Security\Guard\GuardAuthenticatorHandler" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
-      <argument type="collection">
-        <argument>api</argument>
-      </argument>
+      <argument type="collection"/>
       <call method="setSessionAuthenticationStrategy">
         <argument type="service" id="security.authentication.session_strategy"/>
       </call>
@@ -2822,50 +2818,22 @@
       <argument>api</argument>
       <argument>security.user_checker</argument>
       <argument>.security.request_matcher.p4VlLPC</argument>
-      <argument>true</argument>
-      <argument>true</argument>
-      <argument>TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Symfony\Security\UserProvider</argument>
-      <argument>null</argument>
-      <argument>Trikoder\Bundle\OAuth2Bundle\Security\EntryPoint\OAuth2EntryPoint</argument>
-      <argument>null</argument>
-      <argument>null</argument>
-      <argument type="collection">
-        <argument>oauth2</argument>
-      </argument>
+      <argument>false</argument>
+      <argument>false</argument>
+      <argument></argument>
+      <argument></argument>
+      <argument></argument>
+      <argument></argument>
+      <argument></argument>
+      <argument type="collection"/>
       <argument>null</argument>
     </service>
     <service id=".security.request_matcher.p4VlLPC" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/api</argument>
     </service>
-    <service id="security.authentication.provider.oauth2.api" class="Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Provider\OAuth2Provider">
-      <argument type="service" id="TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Symfony\Security\UserProvider"/>
-      <argument type="service" id="League\OAuth2\Server\ResourceServer"/>
-      <argument type="service" id="Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory"/>
-    </service>
-    <service id="security.authentication.listener.oauth2.api" class="Trikoder\Bundle\OAuth2Bundle\Security\Firewall\OAuth2Listener">
-      <argument type="service" id="security.token_storage"/>
-      <argument type="service" id="security.authentication.manager"/>
-      <argument type="service" id="sensio_framework_extra.psr7.http_message_factory"/>
-      <argument type="service" id="Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory"/>
-    </service>
-    <service id="security.exception_listener.api" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
-      <argument type="service" id="security.token_storage"/>
-      <argument type="service" id="security.authentication.trust_resolver"/>
-      <argument type="service" id="security.http_utils"/>
-      <argument>api</argument>
-      <argument type="service" id="Trikoder\Bundle\OAuth2Bundle\Security\EntryPoint\OAuth2EntryPoint"/>
-      <argument>null</argument>
-      <argument>null</argument>
-      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
-      <argument>true</argument>
-    </service>
     <service id="security.firewall.map.context.api" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext" public="false">
-      <argument type="iterator">
-        <argument type="service" id="security.channel_listener"/>
-        <argument type="service" id="security.authentication.listener.oauth2.api"/>
-        <argument type="service" id="security.access_listener"/>
-      </argument>
-      <argument type="service" id="security.exception_listener.api"/>
+      <argument type="iterator"/>
+      <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="security.firewall.map.config.api"/>
     </service>
@@ -6813,8 +6781,6 @@
     <service id="security.firewall" alias="debug.security.firewall" public="false"/>
     <service id="security.user.provider.concrete.user_provider" alias="TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Symfony\Security\UserProvider" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserProviderInterface" alias="TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Symfony\Security\UserProvider"/>
-    <service id="security.authentication.session_strategy.api" alias="security.authentication.session_strategy_noop"/>
-    <service id="security.user_checker.api" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="Prooph\Common\Messaging\MessageFactory" alias="prooph_event_store.message_factory"/>
     <service id="Doctrine\DBAL\Driver\Connection" alias="doctrine.dbal.default_connection" public="false"/>

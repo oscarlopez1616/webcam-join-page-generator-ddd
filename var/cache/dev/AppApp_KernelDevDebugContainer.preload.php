@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerXWLSgUj/AppApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerXZbKj6b/AppApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'App\Kernel';
@@ -61,9 +61,9 @@ $classes[] = 'Symfony\Component\HttpKernel\EventListener\RouterListener';
 $classes[] = 'Doctrine\Common\Annotations\AnnotationReader';
 $classes[] = 'Doctrine\Common\Annotations\AnnotationRegistry';
 $classes[] = 'Symfony\Component\Security\Core\Authorization\AuthorizationChecker';
+$classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Token\Storage\UsageTrackingTokenStorage';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage';
-$classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationTrustResolver';
 $classes[] = 'Symfony\Component\Security\Core\Role\RoleHierarchy';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallMap';

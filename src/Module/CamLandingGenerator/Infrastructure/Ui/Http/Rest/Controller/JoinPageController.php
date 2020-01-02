@@ -47,24 +47,22 @@ class JoinPageController
 
 
     /**
-     * @Route("/", name="get_join_page", methods={"Get"})
+     * @Route("/{id}/", name="get_join_page", methods={"Get"})
      *
-     * @param Request $request
+     * @param string $id
      * @return JsonResponse
      * @throws Exception
      */
     public function getJoinPage(
-        Request $request
+        string $id
     ): JsonResponse {
 
         //$this->denyAccessUnlessGranted(LoanControllerVoter::POST_LOAN);
 
-        $data = json_decode($request->getContent(), true);
-        InfrastructureAssertion::keyExists($data, 'id');
-        InfrastructureAssertion::isString($data['id']);
+        InfrastructureAssertion::notEmptyString($id);
 
         $query = new FindJoinPageByAffiliateUrlQuery(
-            urldecode($data['id'])
+            urldecode($id)
         );
 
 
