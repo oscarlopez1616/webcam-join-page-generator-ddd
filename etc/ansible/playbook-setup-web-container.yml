@@ -10,9 +10,9 @@
       mysql_db:
         name: "{{item}}"
         state: present
-        login_user: "{{ lookup('env','MYSQL_USER') }}"
-        login_password: "{{ lookup('env','MYSQL_PASSWORD') }}"
-        login_host: "{{ lookup('env','MYSQL_HOST') }}"
+        login_user: "root"
+        login_password: "root"
+        login_host: "0.0.0.0"
         config_file: false
       with_items:
         - auditor_framework
