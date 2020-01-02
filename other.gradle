@@ -39,12 +39,12 @@ task createOauthKeys{
   doLast {
     exec {
       workingDir 'etc/oAuth2/key/'
-      commandLine 'su','-s','/bin/bash','-c','openssl genrsa -out private.key 2048', '--', 'www-data'
+      commandLine 'su','-s','/bin/bash','-c','openssl genrsa -out private.key 2048'
     }
 
     exec {
       workingDir 'etc/oAuth2/key/'
-      commandLine 'su','-s','/bin/bash','-c','openssl rsa -in private.key -pubout -out public.key', '--', 'www-data'
+      commandLine 'su','-s','/bin/bash','-c','openssl rsa -in private.key -pubout -out public.key'
     }
   }
 }

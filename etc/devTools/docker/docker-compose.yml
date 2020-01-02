@@ -5,7 +5,7 @@ services:
     php:
         container_name: container_tech_pump_php
         image: auditorframework/php:7.3.9-fpm
-        command: bash -c "./gradlew createOauthKeys && php-fpm"
+        command: bash -c "php-fpm"
         volumes:
             - type: bind
               source: ../../../

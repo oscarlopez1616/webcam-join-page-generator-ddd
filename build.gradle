@@ -23,7 +23,7 @@ buildscript {
   }
 }
 
-defaultTasks 'initReadModelConnection', 'initEventStoreConnection', 'createReadModelSchema','createEventStreamAndProjectionTable','createAuditorFrameworkEventStreams', 'createInitialUsers'
+defaultTasks 'initReadModelConnection', 'initEventStoreConnection', 'createReadModelSchema','createEventStreamAndProjectionTable','createAuditorFrameworkEventStreams', 'createInitialUsers', 'createOauthKeys'
 
 ext.copyEnvFile = {
   exec {

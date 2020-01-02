@@ -40,3 +40,7 @@ e2a7a6,172.21.0.1,GET,http://localhost/api/cam_landing_creator/join_page/www.bus
 03b3d4,172.21.0.1,GET,http://localhost/api/cam_landing_creator/join_page/www.buscando-novia.com/,1577984688,,200
 9e7938,172.21.0.1,GET,http://localhost/api/cam_landing_creator/join_page/www.buscando-novia.com/,1577984746,,200
 d72f47,172.21.0.1,GET,http://localhost/api/cam_landing_creator/join_page/www.buscando-novia.com/,1577985329,,200
+6c73af,172.22.0.1,POST,http://localhost/token,1577990129,,200
+6a305a,172.22.0.1,POST,http://localhost/api/cam_landing_creator/affiliate/?XDEBUG_SESSION_START=phpstorm,1577990135,,201
+aff81c,172.22.0.1,POST,http://localhost/api/cam_landing_creator/cam_unit/?XDEBUG_SESSION_START=phpstorm,1577990138,,201
+969f9b,172.22.0.1,GET,http://localhost/api/cam_landing_creator/join_page/www.buscando-novia.com/?XDEBUG_SESSION_START=phpstorm,1577990186,,200
