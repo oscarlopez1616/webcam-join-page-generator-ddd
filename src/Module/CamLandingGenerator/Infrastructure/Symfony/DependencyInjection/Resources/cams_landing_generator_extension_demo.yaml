@@ -1,0 +1,2 @@
+imports:
+  - { resource: "infrastructure/{_financial_infrastructure_demo}.yaml" }

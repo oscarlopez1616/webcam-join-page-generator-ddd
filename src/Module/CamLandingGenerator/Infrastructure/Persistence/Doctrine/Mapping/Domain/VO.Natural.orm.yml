@@ -1,0 +1,7 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural:
+  type: embeddable
+
+  fields:
+    value:
+      type: integer
+      nullable: false

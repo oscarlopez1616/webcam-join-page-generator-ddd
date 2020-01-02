@@ -1,0 +1,22 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit:
+  type: entity
+  table: cam_landing_generator_cam_unit
+  id:
+    id:
+      type: CamUnitId
+
+  manyToMany:
+    camUnitsContent:
+      targetEntity: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity\DoctrineCamUnitContent
+      joinTable:
+        name: cam_landing_generator_cam_unit_cam_unit_content
+        joinColumns:
+          cam_unit_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          cam_unit_content_id:
+            referencedColumnName: id
+            unique: true
+            onDelete: CASCADE
+      cascade: ["ALL"]
+

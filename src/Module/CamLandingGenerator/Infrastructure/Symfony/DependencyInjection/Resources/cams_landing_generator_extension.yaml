@@ -1,0 +1,4 @@
+imports:
+  - { resource: services/cams_landing_generator_services.yaml }
+  - { resource: infrastructure/cams_landing_generator_infrastructure.yaml }
+  - { resource: infrastructure/cams_landing_generator_controllers.yaml }

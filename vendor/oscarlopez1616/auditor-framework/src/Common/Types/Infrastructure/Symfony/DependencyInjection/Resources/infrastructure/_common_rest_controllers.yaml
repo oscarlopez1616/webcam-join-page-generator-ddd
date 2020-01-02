@@ -1,0 +1,25 @@
+services:
+  TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\Controller:
+    abstract: true
+    public: true
+    autowire: true
+    arguments:
+      $commandBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus'
+      $queryBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus'
+      $identifiableDtoResourceToApiRestResourceDataTransformer: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\DataTransformer\IdentifiableDtoResourceToRestResourceDataTransformer'
+      $nonIdentifiableDtoResourceToApiRestResourceDataTransformer: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\DataTransformer\NonIdentifiableDtoResourceToRestResourceDataTransformer'
+      $serializer: '@jms_serializer'
+
+  #ApiGateway Controllers
+  TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\ApiGateway\ApiGatewayController:
+    parent: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\Controller
+    abstract: true
+    arguments:
+      $clientDirector: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Client\Oauth2ClientDirector'
+      $clientBuilder: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Client\Oauth2WithPasswordCredentialsClientBuilder'
+
+  #HealthCheckController
+  TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\HealthCheckController:
+
+  TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\CsvController:
+    parent: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\Controller

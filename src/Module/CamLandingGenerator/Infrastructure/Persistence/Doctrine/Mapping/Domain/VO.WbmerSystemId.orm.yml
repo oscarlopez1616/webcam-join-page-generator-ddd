@@ -1,0 +1,8 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerSystemId:
+  type: embeddable
+
+  fields:
+    value:
+      type: text
+
+      nullable: true

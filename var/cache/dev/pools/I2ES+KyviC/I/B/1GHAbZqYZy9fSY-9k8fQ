@@ -1,0 +1,27 @@
+<?php //%255BTheCodeFighters%255CBundle%255CAuditorFramework%255CCommon%255CModule%255CSecurityAndAcl%255CInfrastructure%255CUi%255CHttp%255CRest%255CController%255CUserController%2523getUserByUserId%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{userId}/',
+            ],
+            'name' => [
+                'user_by_user_id',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

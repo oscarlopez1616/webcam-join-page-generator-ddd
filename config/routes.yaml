@@ -1,0 +1,27 @@
+oauth2:
+  resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'
+
+cam_unit_controller:
+  prefix: /api/cam_landing_creator/cam_unit
+  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController
+
+affiliate_controller:
+  prefix: /api/cam_landing_creator/affiliate
+  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController
+
+join_page_controller:
+  prefix: /api/cam_landing_creator/join_page
+  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\JoinPageController
+
+user_controller:
+  prefix: /api/security_and_acl/user
+  resource: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Ui\Http\Rest\Controller\UserController
+
+csv_controller:
+  prefix: /api/common/csv
+  resource: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\CsvController
+
+#HealthCheckController
+health_check_controller:
+  prefix: /api/healthcheck
+  resource: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Controller\HealthCheckController

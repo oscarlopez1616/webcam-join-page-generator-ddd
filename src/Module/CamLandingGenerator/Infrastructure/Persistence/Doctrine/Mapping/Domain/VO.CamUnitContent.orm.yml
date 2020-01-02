@@ -1,0 +1,76 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent:
+  type: embeddable
+
+  embedded:
+    wbmerTwitter:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerTwitter
+    wbmerId:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural
+    wbmerNick:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerNick
+    wbmerPermalink:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerPermalink
+    wbmerHeight:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural
+    wbmerCountry:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Country
+    wbmerSystemId:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerSystemId
+    wbmerRanking:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerRanking
+    wbmerDtRate:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerDtRate
+    wbmerEspSwf:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf
+    wbmerVideos:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerVideos
+    languages:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Languages
+  fields:
+    camUnitThumb:
+      type: CamUnitThumb
+      nullable: false
+    wbmerOnline:
+      type: boolean
+      nullable: false
+    wbmerBirthdate:
+      type: datetime
+      nullable: false
+    wbmerSystem:
+      type: boolean
+      nullable: false
+    wbmerActive:
+      type: boolean
+      nullable: false
+    wbmerLive:
+      type: boolean
+      nullable: false
+    wbmerNew:
+      type: boolean
+      nullable: false
+    wbmerBanned:
+      type: boolean
+      nullable: false
+    wbmerLastLogin:
+      type: datetime
+      nullable: false
+    wbmerRegister:
+      type: datetime
+      nullable: false
+    wbmerPHd:
+      type: boolean
+      nullable: false
+    wbmerPAudio:
+      type: boolean
+      nullable: false
+    wbmerPositionOnline:
+      type: float
+      nullable: false
+    wbmerPosition:
+      type: float
+      nullable: false
+
+
+
+
+

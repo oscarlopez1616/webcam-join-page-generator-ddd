@@ -1,0 +1,20 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\Affiliate:
+  type: entity
+  table: cam_landing_generator_affiliate
+  id:
+    id:
+      type: WebUrl
+
+  embedded:
+    affiliateName:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\AffiliateName
+    cumLouderNatTrackingCode:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
+    cumLouderWebCamsTrackingCode:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
+    cssPath:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Path
+    analyticsCode:
+      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode
+
+

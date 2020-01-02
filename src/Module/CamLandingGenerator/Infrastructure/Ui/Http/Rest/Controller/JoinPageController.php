@@ -1,0 +1,82 @@
+<?php
+
+declare(strict_types=1);
+
+namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
+
+use Exception;
+use JMS\Serializer\Serializer;
+use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus;
+use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus;
+use TheCodeFighters\Bundle\AuditorFramework\Common\Utils\Assertion\InfrastructureAssertion;
+use AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+
+class JoinPageController
+{
+
+    /**
+     * @var CommandBus
+     */
+    private $commandBus;
+    /**
+     * @var QueryBus
+     */
+    private $queryBus;
+    /**
+     * @var Serializer
+     */
+    private $serializer;
+
+    public function __construct(
+        CommandBus $commandBus,
+        QueryBus $queryBus,
+        Serializer $serializer
+    ) {
+        $this->commandBus = $commandBus;
+        $this->queryBus = $queryBus;
+        $this->serializer = $serializer;
+    }
+
+    protected function namespaces(): array
+    {
+        return array('cams_landing_generator', 'join_page');
+    }
+
+
+    /**
+     * @Route("/", name="get_join_page", methods={"Get"})
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function getJoinPage(
+        Request $request
+    ): JsonResponse {
+
+        //$this->denyAccessUnlessGranted(LoanControllerVoter::POST_LOAN);
+
+        $data = json_decode($request->getContent(), true);
+        InfrastructureAssertion::keyExists($data, 'id');
+        InfrastructureAssertion::isString($data['id']);
+
+        $query = new FindJoinPageByAffiliateUrlQuery(
+            urldecode($data['id'])
+        );
+
+
+        return new JsonResponse(
+            json_decode(
+                $this->serializer->serialize(
+                    $this->queryBus->dispatch($query),
+                    'json'
+                ),
+                true
+            ),
+            200
+        );
+    }
+}

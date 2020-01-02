@@ -1,0 +1,49 @@
+{
+    "name": "rx/websocket",
+    "type": "library",
+    "description": "Websockets for PHP using Rx",
+    "keywords": [
+        "websocket",
+        "websockets",
+        "rfc6455",
+        "rx",
+        "rx.php",
+        "rxphp",
+        "react",
+        "reactive"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Bonneau", "email": "matt@bonneau.net", "role": "Developer"
+        },
+
+        {
+            "name": "David Dan", "email": "davidwdan@gmail.com", "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rx\\Websocket\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rx\\Websocket\\Test\\": "test/",
+            "Rx\\": "vendor/reactivex/rxphp/test/Rx"
+        },
+        "files": [
+            "vendor/reactivex/rxphp/test/helper-functions.php"
+        ]
+    },
+    "require": {
+        "react/http": "^0.7.3 | ^0.8",
+        "react/http-client": "^0.5.3",
+        "voryx/event-loop": "^3.0 || ^2.0.2",
+        "ratchet/rfc6455": "^0.2.2",
+        "reactivex/rxphp": "^2.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7.0"
+    }
+}

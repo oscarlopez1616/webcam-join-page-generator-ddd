@@ -1,0 +1,20 @@
+.gradle
+gradle
+gradlew
+gradlew.bat
+composer.phar
+.idea
+.project
+.settings
+.DS_Store
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+.gradle/
+/src/Common/Module/SecurityAndAcl/Infrastructure/TrikoderOauth2/Keys/private.key
+/src/Common/Module/SecurityAndAcl/Infrastructure/TrikoderOauth2/Keys/public.key
+
+/etc/airflow/dags/__pycache__/

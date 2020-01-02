@@ -1,0 +1,39 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\AffiliateReadModelRepository: '@AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineAffiliateReadModelRepository'
+
+  AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository: '@AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineCamUnitReadModelRepository'
+
+  #CreateCamUnit
+  AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitHandler:
+    tags:
+      - {
+          name: 'prooph_service_bus.auditor_framework_command_bus.route_target',
+          message: AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitCommand
+       }
+
+  #CreateAffiliate
+  AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateAffiliate\CreateAffiliateHandler:
+    tags:
+      - {
+          name: 'prooph_service_bus.auditor_framework_command_bus.route_target',
+          message: AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateAffiliate\CreateAffiliateCommand
+       }
+
+  #FindJoinPageByAffiliateUrl
+  AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlHandler:
+    arguments:
+      $cache: "@app.cache.join_page"
+    tags:
+      - {
+          name: 'prooph_service_bus.auditor_framework_query_bus.route_target',
+          message: AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery
+       }
+
+  AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\JoinPageAssembler:
+
+

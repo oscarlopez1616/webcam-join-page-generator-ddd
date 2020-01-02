@@ -1,0 +1,50 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  AuditorFramework\Module\CamLandingGenerator\Domain\CamUnitContentAdapter: '@AuditorFramework\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort\CumLouderPort'
+
+  AuditorFramework\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort\CumLouderPort:
+    arguments:
+      $baseUrl: '%env(CAM_CONTENT_PORT_URL)%'
+
+  GuzzleHttp\Client:
+
+  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector:
+    arguments:
+      $connection: '@doctrine.dbal.default_connection'
+      $cache: "@app.cache.join_page"
+
+  AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\ProophCamUnitProjection:
+    tags:
+    - {
+        name: prooph_event_store.projection,
+        projection_name: cam_landing_generator_cam_unit_projection_manager,
+        projection_manager: cam_landing_generator_cam_unit_projection_manager,
+        read_model: 'AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector'
+      }
+
+  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlAffiliateProjector:
+    arguments:
+      $connection: '@doctrine.dbal.default_connection'
+      $cache: "@app.cache.join_page"
+
+
+  AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\ProophAffiliateProjection:
+    tags:
+      - {
+          name: prooph_event_store.projection,
+          projection_name: cam_landing_generator_affiliate_projection_manager,
+          projection_manager: cam_landing_generator_affiliate_projection_manager,
+          read_model: 'AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlAffiliateProjector'
+       }
+
+  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineAffiliateReadModelRepository:
+    arguments:
+      - '@doctrine.orm.entity_manager'
+
+  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineCamUnitReadModelRepository:
+    arguments:
+      - '@doctrine.orm.entity_manager'

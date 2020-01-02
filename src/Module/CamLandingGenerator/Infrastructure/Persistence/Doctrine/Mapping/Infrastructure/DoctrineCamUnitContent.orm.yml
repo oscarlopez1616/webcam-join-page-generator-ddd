@@ -1,0 +1,12 @@
+AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity\DoctrineCamUnitContent:
+  type: entity
+  table: cam_landing_generator_cam_unit_content
+  id:
+    id:
+      type: Uuid
+
+
+
+
+
+

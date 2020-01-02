@@ -1,0 +1,27 @@
+<?php //%255BAuditorFramework%255CModule%255CCamLandingGenerator%255CInfrastructure%255CUi%255CHttp%255CRest%255CController%255CCamUnitController%2523postCamUnit%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/',
+            ],
+            'name' => [
+                'post_cam_unit',
+            ],
+            'methods' => [
+                [
+                    'Post',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

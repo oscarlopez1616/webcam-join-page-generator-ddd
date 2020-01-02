@@ -1,0 +1,7 @@
+AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf:
+  type: embeddable
+
+  fields:
+    value:
+      type: text
+      nullable: true
