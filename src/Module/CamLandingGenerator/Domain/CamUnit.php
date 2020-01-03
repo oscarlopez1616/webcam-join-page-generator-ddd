@@ -12,7 +12,7 @@ use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\AggregateRoot;
 class CamUnit extends AggregateRoot
 {
     /**
-     * @var CamUnitContent[]
+     * @var CamUnit[]|PersistentCollection
      */
     private $camUnitsContent;
 
@@ -59,10 +59,10 @@ class CamUnit extends AggregateRoot
         return $this->id;
     }
 
-    public function camUnitsContent(): array
+    public function camUnitsContent( int $offset=0, int $limit=36): array
     {
         if(get_class($this->camUnitsContent) === PersistentCollection::class){
-            return $this->camUnitsContent->toArray();
+            return $this->camUnitsContent->slice($offset*$limit,$limit);
         }
         return $this->camUnitsContent;
     }

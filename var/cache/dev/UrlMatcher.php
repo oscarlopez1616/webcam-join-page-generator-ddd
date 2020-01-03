@@ -43,11 +43,11 @@ return [
                     .')'
                 .')'
                 .'|/api/(?'
-                    .'|cam_landing_creator/join_page/([^/]++)(*:215)'
+                    .'|cam_landing_creator/join_page/([^/]++)/([^/]++)(*:224)'
                     .'|security_and_acl/user/(?'
-                        .'|password/([^/]++)/([^/]++)(*:274)'
-                        .'|user_name/([^/]++)(*:300)'
-                        .'|([^/]++)(*:316)'
+                        .'|password/([^/]++)/([^/]++)(*:283)'
+                        .'|user_name/([^/]++)(*:309)'
+                        .'|([^/]++)(*:325)'
                     .')'
                 .')'
             .')/?$}sD',
@@ -60,10 +60,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        215 => [[['_route' => 'get_join_page', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\JoinPageController::getJoinPage'], ['id'], ['GET' => 0], null, true, true, null]],
-        274 => [[['_route' => 'get_forgot_password', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getPasswordRecoveryAction'], ['passwordRecoveryId', 'userName'], ['GET' => 0], null, false, true, null]],
-        300 => [[['_route' => 'user_id_by_username', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserName'], ['username'], ['GET' => 0], null, true, true, null]],
-        316 => [
+        224 => [[['_route' => 'get_join_page', '_controller' => 'AuditorFramework\\Module\\CamLandingGenerator\\Infrastructure\\Ui\\Http\\Rest\\Controller\\JoinPageController::getJoinPage'], ['id', 'page'], ['GET' => 0], null, true, true, null]],
+        283 => [[['_route' => 'get_forgot_password', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getPasswordRecoveryAction'], ['passwordRecoveryId', 'userName'], ['GET' => 0], null, false, true, null]],
+        309 => [[['_route' => 'user_id_by_username', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserName'], ['username'], ['GET' => 0], null, true, true, null]],
+        325 => [
             [['_route' => 'user_by_user_id', '_controller' => 'TheCodeFighters\\Bundle\\AuditorFramework\\Common\\Module\\SecurityAndAcl\\Infrastructure\\Ui\\Http\\Rest\\Controller\\UserController::getUserByUserId'], ['userId'], ['GET' => 0], null, true, true, null],
             [null, null, null, null, false, false, 0],
         ],

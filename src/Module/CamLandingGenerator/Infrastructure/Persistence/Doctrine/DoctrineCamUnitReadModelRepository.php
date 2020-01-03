@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine;
 
-use Doctrine\ORM\EntityManager;
-use Exception;
 use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
 use AuditorFramework\Module\CamLandingGenerator\Domain\Exception\CamUnitNotFoundByNewestCreationDateException;
 use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository;
+use Doctrine\ORM\EntityManager;
+use Exception;
 
 class DoctrineCamUnitReadModelRepository implements CamUnitReadModelRepository
 {

@@ -12,9 +12,12 @@ use function Lambdish\Phunctional\map;
 
 class JoinPageAssembler
 {
+    private const AMOUNT_CAMS_PER_JOIN_PAGE = 36;
+
     public function toDto(
         Affiliate $affiliate,
-        CamUnit $camUnit
+        CamUnit $camUnit,
+        int $page
     ): JoinPageDto {
 
         $camUnitContentWithAffiliateDataDtos = map(
@@ -62,7 +65,7 @@ class JoinPageAssembler
                 );
             }
             ,
-            $camUnit->camUnitsContent()
+            $camUnit->camUnitsContent($page,self::AMOUNT_CAMS_PER_JOIN_PAGE)
         );
 
         return new JoinPageDto(

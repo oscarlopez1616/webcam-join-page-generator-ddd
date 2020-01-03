@@ -55,10 +55,11 @@ class FindJoinPageByAffiliateUrlHandler implements QueryHandler
         $affiliateId = new WebUrl($query->affiliateUrl());
 
         $affiliateIdUrlEncoded = urlencode($affiliateId->value());
-        if ($this->cache->getItem($affiliateIdUrlEncoded)->isHit()) {
-            $queryResult = $this->cache->getItem($affiliateIdUrlEncoded)->get();
+        $cacheKey = $affiliateIdUrlEncoded.$query->page();
+        if ($this->cache->getItem($cacheKey)->isHit()) {
+            $queryResult = $this->cache->getItem($cacheKey)->get();
         } else {
-            $messageCached = $this->cache->getItem($affiliateIdUrlEncoded);
+            $messageCached = $this->cache->getItem($cacheKey);
 
             $affiliate = $this->affiliateReadModelRepository->findOrFailAffiliateById(
                 $affiliateId
@@ -67,9 +68,9 @@ class FindJoinPageByAffiliateUrlHandler implements QueryHandler
             $camUnit = $this->camUnitReadModelRepository->findOrNewestCamUnit();
 
             $queryResult = $this->joinPageAssembler->toDto(
-                $affiliate
-                ,
-                $camUnit
+                $affiliate,
+                $camUnit,
+                $query->page()
             );
 
             $messageCached->set($queryResult);

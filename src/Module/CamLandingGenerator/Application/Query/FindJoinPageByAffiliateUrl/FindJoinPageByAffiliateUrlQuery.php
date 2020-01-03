@@ -13,15 +13,30 @@ final class FindJoinPageByAffiliateUrlQuery implements Query
      */
     private $affiliateUrl;
 
+    /**
+     * @var int
+     */
+    private $page;
 
-    public function __construct(string $affiliateUrl)
+    /**
+     * FindJoinPageByAffiliateUrlQuery constructor.
+     * @param string $affiliateUrl
+     * @param int $page
+     */
+    public function __construct(string $affiliateUrl, int $page)
     {
         $this->affiliateUrl = $affiliateUrl;
+        $this->page = $page;
     }
 
     public function affiliateUrl(): string
     {
         return $this->affiliateUrl;
+    }
+
+    public function page(): int
+    {
+        return $this->page;
     }
 
 }

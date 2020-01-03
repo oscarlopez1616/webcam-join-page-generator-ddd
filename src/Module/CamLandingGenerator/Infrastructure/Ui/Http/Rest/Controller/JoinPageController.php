@@ -4,15 +4,14 @@ declare(strict_types=1);
 
 namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
 
+use AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery;
 use Exception;
 use JMS\Serializer\Serializer;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Annotation\Route;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Utils\Assertion\InfrastructureAssertion;
-use AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 
 class JoinPageController
 {
@@ -47,22 +46,24 @@ class JoinPageController
 
 
     /**
-     * @Route("/{id}/", name="get_join_page", methods={"Get"})
+     * @Route("/{id}/{page}/", name="get_join_page", methods={"Get"})
      *
      * @param string $id
+     * @param int $page
      * @return JsonResponse
      * @throws Exception
      */
     public function getJoinPage(
-        string $id
+        string $id,
+        int $page
     ): JsonResponse {
 
-        //$this->denyAccessUnlessGranted(LoanControllerVoter::POST_LOAN);
-
         InfrastructureAssertion::notEmptyString($id);
+        InfrastructureAssertion::isInteger($page);
 
         $query = new FindJoinPageByAffiliateUrlQuery(
-            urldecode($id)
+            urldecode($id),
+            $page
         );
 
 
