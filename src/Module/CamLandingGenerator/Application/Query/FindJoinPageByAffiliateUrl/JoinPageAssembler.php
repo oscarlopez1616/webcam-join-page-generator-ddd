@@ -69,7 +69,7 @@ class JoinPageAssembler
         );
 
         return new JoinPageDto(
-            $camUnitContentWithAffiliateDataDtos
+            array_values($camUnitContentWithAffiliateDataDtos)
         );
     }
 }

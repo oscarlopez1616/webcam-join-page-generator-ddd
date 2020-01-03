@@ -1,3 +1,0 @@
-<?php //%255BTheCodeFighters%255CBundle%255CAuditorFramework%255CCommon%255CModule%255CSecurityAndAcl%255CInfrastructure%255CUi%255CHttp%255CRest%255CController%255CUserController%2523processPatchAddRoleToUser%255D%255B1%255D
-
-return [PHP_INT_MAX, []];
