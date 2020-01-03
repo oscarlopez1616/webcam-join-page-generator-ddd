@@ -1,8 +1,0 @@
-TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Domain\User\UserType:
-  type: embeddable
-
-  fields:
-    userType:
-      type: text
-      column: user_type
-      nullable: false
