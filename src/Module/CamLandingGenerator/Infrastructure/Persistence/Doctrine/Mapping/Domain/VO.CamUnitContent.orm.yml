@@ -1,31 +1,31 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent:
   type: embeddable
 
   embedded:
     wbmerTwitter:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerTwitter
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerTwitter
     wbmerId:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Natural
     wbmerNick:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerNick
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerNick
     wbmerPermalink:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerPermalink
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerPermalink
     wbmerHeight:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Natural
     wbmerCountry:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Country
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Country
     wbmerSystemId:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerSystemId
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerSystemId
     wbmerRanking:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerRanking
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerRanking
     wbmerDtRate:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerDtRate
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerDtRate
     wbmerEspSwf:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf
     wbmerVideos:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerVideos
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerVideos
     languages:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Languages
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Languages
   fields:
     camUnitThumb:
       type: CamUnitThumb

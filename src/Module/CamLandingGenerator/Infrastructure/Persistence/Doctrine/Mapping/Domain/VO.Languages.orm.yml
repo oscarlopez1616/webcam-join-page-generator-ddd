@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\Languages:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Languages:
   type: embeddable
 
   fields:

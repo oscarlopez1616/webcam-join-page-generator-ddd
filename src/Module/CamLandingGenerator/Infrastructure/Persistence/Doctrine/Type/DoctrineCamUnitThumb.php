@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\JsonType;
-use AuditorFramework\Module\CamLandingGenerator\Domain\DataTransformer\CamUnitThumbDataTransformer;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitThumb;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\DataTransformer\CamUnitThumbDataTransformer;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitThumb;
 
 class DoctrineCamUnitThumb extends JsonType
 {

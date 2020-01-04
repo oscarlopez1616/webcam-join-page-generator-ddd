@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\VO;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\VO;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\ValueObject;
 use function Lambdish\Phunctional\map;

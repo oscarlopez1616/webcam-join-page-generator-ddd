@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerRanking:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerRanking:
   type: embeddable
 
   fields:

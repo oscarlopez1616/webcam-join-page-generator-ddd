@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
 
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus\Query;

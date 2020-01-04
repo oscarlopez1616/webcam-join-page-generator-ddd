@@ -1,5 +1,5 @@
 services:
-  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController:
+  WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController:
     public: true
     autowire: true
     arguments:
@@ -7,7 +7,7 @@ services:
       $queryBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus'
       $serializer: '@jms_serializer'
 
-  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController:
+  WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController:
     public: true
     autowire: true
     arguments:
@@ -15,7 +15,7 @@ services:
       $queryBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus'
       $serializer: '@jms_serializer'
 
-  AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\JoinPageController:
+  WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\JoinPageController:
     public: true
     autowire: true
     arguments:

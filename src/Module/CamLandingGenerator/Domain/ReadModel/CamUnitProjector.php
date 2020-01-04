@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel;
 
 interface CamUnitProjector
 {

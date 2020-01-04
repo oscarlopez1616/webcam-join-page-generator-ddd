@@ -1,21 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\DataTransformer;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\DataTransformer;
 
 use DateTime;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\Country;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\Languages;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerDtRate;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerNick;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerPermalink;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerRanking;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerSystemId;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerTwitter;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerVideos;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Country;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Languages;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Natural;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerDtRate;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerNick;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerPermalink;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerRanking;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerSystemId;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerTwitter;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerVideos;
 
 class CamUnitContentDataTransformer
 {

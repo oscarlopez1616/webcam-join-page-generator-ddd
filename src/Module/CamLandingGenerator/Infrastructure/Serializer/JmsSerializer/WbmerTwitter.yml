@@ -1,6 +1,6 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent:
     exclusion_policy: ALL
     properties:
       wbmerTwitter:
           expose: true
-          type: AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerTwitter
+          type: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerTwitter

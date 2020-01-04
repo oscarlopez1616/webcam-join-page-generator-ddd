@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnitContentAdapter;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnitContentAdapter;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
 use stdClass;
 use function Lambdish\Phunctional\map;
 

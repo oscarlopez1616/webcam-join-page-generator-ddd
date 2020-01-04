@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine;
 
 use Doctrine\ORM\EntityManager;
-use AuditorFramework\Module\CamLandingGenerator\Domain\Affiliate;
-use AuditorFramework\Module\CamLandingGenerator\Domain\Exception\AffiliateNotFoundByIdException;
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\AffiliateReadModelRepository;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WebUrl;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Affiliate;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Exception\AffiliateNotFoundByIdException;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\AffiliateReadModelRepository;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WebUrl;
 
 class DoctrineAffiliateReadModelRepository implements AffiliateReadModelRepository
 {

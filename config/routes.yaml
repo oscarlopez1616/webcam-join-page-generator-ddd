@@ -3,15 +3,15 @@ oauth2:
 
 cam_unit_controller:
   prefix: /api/cam_landing_creator/cam_unit
-  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController
+  resource: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController
 
 affiliate_controller:
   prefix: /api/cam_landing_creator/affiliate
-  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController
+  resource: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController
 
 join_page_controller:
   prefix: /api/cam_landing_creator/join_page
-  resource: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\JoinPageController
+  resource: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\JoinPageController
 
 user_controller:
   prefix: /api/security_and_acl/user

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Symfony\DependencyInjection;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Symfony\DependencyInjection;
 
 use Exception;
 use Symfony\Component\Config\FileLocator;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
-use AuditorFramework\Module\CamLandingGenerator\Domain\Exception\CamUnitNotFoundByNewestCreationDateException;
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Exception\CamUnitNotFoundByNewestCreationDateException;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository;
 use Doctrine\ORM\EntityManager;
 use Exception;
 

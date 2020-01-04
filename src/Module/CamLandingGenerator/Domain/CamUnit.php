@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitId;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 use Doctrine\ORM\PersistentCollection;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\AggregateRoot;
 

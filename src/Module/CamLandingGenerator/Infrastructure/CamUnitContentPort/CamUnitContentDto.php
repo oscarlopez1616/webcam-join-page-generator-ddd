@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort;
 
 final class CamUnitContentDto
 {

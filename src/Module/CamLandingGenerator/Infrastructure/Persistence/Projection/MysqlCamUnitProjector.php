@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\CamUnitProjector;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitProjector;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
 use Exception;

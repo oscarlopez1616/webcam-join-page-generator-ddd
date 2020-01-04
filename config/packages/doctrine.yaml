@@ -40,9 +40,9 @@ doctrine:
       UserId: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrineUserId
       Roles: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrineRoles
       PasswordRecoveryId: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrinePasswordRecoveryId
-      CamUnitId: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineCamUnitId
-      CamUnitThumb: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineCamUnitThumb
-      WebUrl: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineWebUrl
+      CamUnitId: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineCamUnitId
+      CamUnitThumb: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineCamUnitThumb
+      WebUrl: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Type\DoctrineWebUrl
 
   orm:
     auto_generate_proxy_classes: '%kernel.debug%'
@@ -66,10 +66,10 @@ doctrine:
       CamLandingGenerator:
         type: yml
         dir: '%kernel.project_dir%/src/Module/CamLandingGenerator/Infrastructure/Persistence/Doctrine/Mapping/Domain'
-        prefix: AuditorFramework\Module\CamLandingGenerator\Domain
+        prefix: WebCamScrapper\Module\CamLandingGenerator\Domain
         is_bundle: false
       CamLandingGeneratorInfrastructure:
         type: yml
         dir: '%kernel.project_dir%/src/Module/CamLandingGenerator/Infrastructure/Persistence/Doctrine/Mapping/Infrastructure'
-        prefix: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity
+        prefix: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity
         is_bundle: false

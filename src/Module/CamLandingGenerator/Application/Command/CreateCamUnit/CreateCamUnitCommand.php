@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateCamUnit;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit;
 
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\Command;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitId;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 
 final class CreateCamUnitCommand implements Command
 {

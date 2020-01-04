@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerThumb:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerThumb:
   type: embeddable
 
   fields:

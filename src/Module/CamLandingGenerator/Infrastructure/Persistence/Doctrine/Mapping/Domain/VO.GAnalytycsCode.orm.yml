@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode:
   type: embeddable
 
   fields:

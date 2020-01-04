@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus\Query;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus\QueryHandler;
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\AffiliateReadModelRepository;
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WebUrl;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\AffiliateReadModelRepository;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WebUrl;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException as InvalidArgumentExceptionAlias;
 use React\Promise\Deferred;

@@ -42,16 +42,16 @@ prooph_event_store:
       projections_table: '_projections'
       projections:
         cam_landing_generator_cam_unit_projection:
-          read_model: 'AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector'
-          projection: 'AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\ProophCamUnitProjection'
+          read_model: 'WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector'
+          projection: 'WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\ProophCamUnitProjection'
     cam_landing_generator_affiliate_projection_manager:
       event_store: 'prooph_event_store.pdo_mysql_event_store'
       connection: 'prooph_event_store.connection.doctrine_pdo_connection'
       projections_table: '_projections'
       projections:
         cam_landing_generator_affiliate_projection:
-          read_model: 'AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlAffiliateProjector'
-          projection: 'AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\ProophAffiliateProjection'
+          read_model: 'WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlAffiliateProjector'
+          projection: 'WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\ProophAffiliateProjection'
     security_and_acl_user_projection_manager:
       event_store: 'prooph_event_store.pdo_mysql_event_store'
       connection: 'prooph_event_store.connection.doctrine_pdo_connection'

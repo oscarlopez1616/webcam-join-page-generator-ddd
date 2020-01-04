@@ -19,6 +19,6 @@ return [
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Symfony\Bundle\CommonBundle::class => ['all' => true],
     TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Symfony\Bundle\SecurityAndAclBundle::class => ['all' => true],
-    AuditorFramework\Module\CamLandingGenerator\Infrastructure\Symfony\Bundle\CamLandingGeneratorBundle::class => ['all' => true],
+    WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Symfony\Bundle\CamLandingGeneratorBundle::class => ['all' => true],
     Trikoder\Bundle\OAuth2Bundle\TrikoderOAuth2Bundle::class => ['all' => true],
 ];

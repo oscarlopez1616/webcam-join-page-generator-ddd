@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateCamUnit;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit;
 
 use GuzzleHttp\Exception\GuzzleException;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\Command;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\CommandHandler;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\WriteModelRepository;
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnitContentAdapter;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitId;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnitContentAdapter;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 
 class CreateCamUnitHandler implements CommandHandler
 {

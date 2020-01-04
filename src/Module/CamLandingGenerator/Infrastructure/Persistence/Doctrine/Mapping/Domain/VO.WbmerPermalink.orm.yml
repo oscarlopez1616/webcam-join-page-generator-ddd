@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerPermalink:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerPermalink:
   type: embeddable
 
   fields:

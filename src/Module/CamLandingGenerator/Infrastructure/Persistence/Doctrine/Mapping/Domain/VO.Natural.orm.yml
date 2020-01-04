@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\Natural:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Natural:
   type: embeddable
 
   fields:

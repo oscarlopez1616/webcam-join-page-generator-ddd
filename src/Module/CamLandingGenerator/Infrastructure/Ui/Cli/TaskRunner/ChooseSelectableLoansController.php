@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Cli\TaskRunner;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Cli\TaskRunner;
 
 use Exception;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus;
-use AuditorFramework\Module\Financial\Application\Loan\Command\ChooseLenderForLoanAmongTheirLoanApplications\ChooseLenderForLoanAmongTheirLoanApplicationsCommand;
-use AuditorFramework\Module\Financial\Domain\Loan\LoanReadModelRepository;
-use AuditorFramework\Module\Financial\Domain\Loan\LoanStatus;
+use WebCamScrapper\Module\Financial\Application\Loan\Command\ChooseLenderForLoanAmongTheirLoanApplications\ChooseLenderForLoanAmongTheirLoanApplicationsCommand;
+use WebCamScrapper\Module\Financial\Domain\Loan\LoanReadModelRepository;
+use WebCamScrapper\Module\Financial\Domain\Loan\LoanStatus;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

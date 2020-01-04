@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerSystemId:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerSystemId:
   type: embeddable
 
   fields:

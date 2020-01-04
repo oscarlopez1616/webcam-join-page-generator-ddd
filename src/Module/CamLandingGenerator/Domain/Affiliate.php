@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\AggregateRoot;
-use AuditorFramework\Module\CamLandingGenerator\Domain\Event\AffiliateWasCreatedEvent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\AffiliateName;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\NatTrackingCode;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\Path;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WebUrl;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\AffiliateWasCreatedEvent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\AffiliateName;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\NatTrackingCode;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Path;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WebUrl;
 
 class Affiliate extends AggregateRoot
 {

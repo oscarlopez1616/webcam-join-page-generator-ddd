@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerTwitter:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerTwitter:
   type: embeddable
 
   fields:

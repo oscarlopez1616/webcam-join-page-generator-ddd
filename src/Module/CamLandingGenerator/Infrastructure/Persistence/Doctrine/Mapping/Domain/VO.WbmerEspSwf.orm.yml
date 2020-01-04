@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf:
+WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerEspSwf:
   type: embeddable
 
   fields:

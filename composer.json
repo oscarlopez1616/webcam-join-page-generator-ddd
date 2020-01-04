@@ -67,7 +67,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AuditorFramework\\": "src",
+            "WebCamScrapper\\": "src",
             "App\\": "App"
         }
     },

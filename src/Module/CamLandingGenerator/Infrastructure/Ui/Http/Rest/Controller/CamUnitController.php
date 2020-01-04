@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
 
 use Exception;
 use JMS\Serializer\Serializer;
@@ -10,7 +10,7 @@ use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Ui\Http\Rest\Resource\CommandRestResource;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Utils\Assertion\InfrastructureAssertion;
-use AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitCommand;
+use WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitCommand;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;

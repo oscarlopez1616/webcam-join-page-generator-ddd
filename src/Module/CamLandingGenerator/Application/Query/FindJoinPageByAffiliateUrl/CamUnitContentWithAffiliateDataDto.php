@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
 
 class CamUnitContentWithAffiliateDataDto
 {

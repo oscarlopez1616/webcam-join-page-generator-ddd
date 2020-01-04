@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\DataTransformer;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\DataTransformer;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitThumb;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerThumb;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitThumb;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerThumb;
 use function Lambdish\Phunctional\map;
 
 class CamUnitThumbDataTransformer

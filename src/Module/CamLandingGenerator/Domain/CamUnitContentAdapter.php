@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain;
 
 use GuzzleHttp\Exception\GuzzleException;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
 
 interface CamUnitContentAdapter
 {

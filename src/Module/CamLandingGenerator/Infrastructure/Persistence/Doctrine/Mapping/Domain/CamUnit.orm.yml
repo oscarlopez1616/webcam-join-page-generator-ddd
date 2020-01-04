@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit:
+WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit:
   type: entity
   table: cam_landing_generator_cam_unit
   id:
@@ -7,7 +7,7 @@ AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit:
 
   manyToMany:
     camUnitsContent:
-      targetEntity: AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity\DoctrineCamUnitContent
+      targetEntity: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\Entity\DoctrineCamUnitContent
       joinTable:
         name: cam_landing_generator_cam_unit_cam_unit_content
         joinColumns:

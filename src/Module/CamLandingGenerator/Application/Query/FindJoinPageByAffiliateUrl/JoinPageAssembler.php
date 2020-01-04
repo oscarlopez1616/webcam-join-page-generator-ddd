@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\Affiliate;
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\WbmerThumb;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Affiliate;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\WbmerThumb;
 use function Lambdish\Phunctional\map;
 
 class JoinPageAssembler

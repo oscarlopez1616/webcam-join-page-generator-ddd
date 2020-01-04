@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Persistence\Projection;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
 use Exception;
-use AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel\AffiliateProjector;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\AffiliateProjector;
 use Prooph\EventStore\Projection\AbstractReadModel;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException;

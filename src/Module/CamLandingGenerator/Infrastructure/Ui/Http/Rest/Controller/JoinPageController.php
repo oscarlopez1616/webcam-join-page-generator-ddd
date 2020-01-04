@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
+namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller;
 
-use AuditorFramework\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery;
+use WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlQuery;
 use Exception;
 use JMS\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\JsonResponse;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\VO;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\VO;
 
 use DateTime;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\ValueObject;
-use AuditorFramework\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort\CamUnitContentDto;
+use WebCamScrapper\Module\CamLandingGenerator\Infrastructure\CamUnitContentPort\CamUnitContentDto;
 
 class CamUnitContent extends ValueObject
 {

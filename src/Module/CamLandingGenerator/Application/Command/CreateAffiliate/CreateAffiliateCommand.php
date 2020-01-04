@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Application\Command\CreateAffiliate;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateAffiliate;
 
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\Command;

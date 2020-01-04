@@ -1,9 +1,9 @@
 <?php
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
-use AuditorFramework\Module\Financial\Infrastructure\Persistence\Projection\MysqlLoanReadModel;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
+use WebCamScrapper\Module\Financial\Infrastructure\Persistence\Projection\MysqlLoanReadModel;
 use Prooph\Bundle\EventStore\Projection\ReadModelProjection;
 use Prooph\EventStore\Projection\ReadModelProjector;
 

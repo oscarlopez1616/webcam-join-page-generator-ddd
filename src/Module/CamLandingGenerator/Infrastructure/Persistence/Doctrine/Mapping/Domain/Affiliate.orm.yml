@@ -1,4 +1,4 @@
-AuditorFramework\Module\CamLandingGenerator\Domain\Affiliate:
+WebCamScrapper\Module\CamLandingGenerator\Domain\Affiliate:
   type: entity
   table: cam_landing_generator_affiliate
   id:
@@ -7,14 +7,14 @@ AuditorFramework\Module\CamLandingGenerator\Domain\Affiliate:
 
   embedded:
     affiliateName:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\AffiliateName
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\AffiliateName
     cumLouderNatTrackingCode:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
     cumLouderWebCamsTrackingCode:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\NatTrackingCode
     cssPath:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\Path
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\Path
     analyticsCode:
-      class: AuditorFramework\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode
+      class: WebCamScrapper\Module\CamLandingGenerator\Domain\VO\GAnalytycsCode
 
 

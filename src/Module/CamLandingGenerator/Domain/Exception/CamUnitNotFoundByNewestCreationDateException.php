@@ -1,9 +1,9 @@
 <?php
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\Exception;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\Exception;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\Exception\DomainEntityNotFoundByIdException;
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
 
 class CamUnitNotFoundByNewestCreationDateException extends DomainEntityNotFoundByIdException
 {

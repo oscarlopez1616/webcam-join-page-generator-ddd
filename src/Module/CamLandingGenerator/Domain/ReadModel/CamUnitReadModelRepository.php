@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\ReadModel;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel;
 
-use AuditorFramework\Module\CamLandingGenerator\Domain\CamUnit;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
 
 interface CamUnitReadModelRepository
 {

@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace AuditorFramework\Module\CamLandingGenerator\Domain\Event;
+namespace WebCamScrapper\Module\CamLandingGenerator\Domain\Event;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\Event\Event;
-use AuditorFramework\Module\CamLandingGenerator\Domain\DataTransformer\CamUnitContentDataTransformer;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
-use AuditorFramework\Module\CamLandingGenerator\Domain\VO\CamUnitId;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\DataTransformer\CamUnitContentDataTransformer;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 use function Lambdish\Phunctional\map;
 
 class CamUnitWasCreatedEvent extends Event
