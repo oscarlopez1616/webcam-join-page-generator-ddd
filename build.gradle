@@ -73,6 +73,18 @@ task initReadModelConnection {
     properties.put("user", WEB_READ_MODEL_DATABASE_USER)
     properties.put("password", WEB_READ_MODEL_DATABASE_PASSWORD)
 
+    Connection dbConnection = driver.connect("jdbc:mysql://${WEB_READ_MODEL_DATABASE_HOST}/", properties)
+
+    String[] queries = [
+    "CREATE DATABASE IF NOT EXISTS ${WEB_READ_MODEL_DATABASE_NAME};",
+    ]
+
+    executeMultipleUpdateQueries(
+        queries,
+        dbConnection
+    )
+
+
     readModelConnection = driver.connect("jdbc:mysql://${WEB_READ_MODEL_DATABASE_HOST}/${WEB_READ_MODEL_DATABASE_NAME}", properties)
   }
 }

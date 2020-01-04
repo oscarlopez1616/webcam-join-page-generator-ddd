@@ -52,10 +52,12 @@ task createOauthKeys{
 task createReadModelSchema {
   description 'Executes composer install and doctrine:schema:create'
   doLast {
+
     exec {
       workingDir '.'
       commandLine 'su', '-s', '/bin/bash','-c', 'composer install --no-interaction'
     }
+
     try {
       exec {
         workingDir '.'

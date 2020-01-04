@@ -48,20 +48,6 @@ services:
         ports:
             - "3306:3306"
 
-#    rabbit:
-#        container_name: container_tech_pump_rabbit
-#        hostname: rabbit
-#        image: rabbitmq:3-management
-#        environment:
-#            RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
-#            RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
-#        volumes:
-#            - rabbitmq:/var/lib/rabbitmq
-#        ports:
-#            - "5672:5672"
-#            - "15672:15672"
-
 volumes:
     nginx:
     mysql:
-#    rabbitmq:
