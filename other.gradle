@@ -54,17 +54,17 @@ task createReadModelSchema {
   doLast {
     exec {
       workingDir '.'
-      commandLine 'su', '-s', '/bin/bash','-c', 'composer install --no-interaction', '--', 'www-data'
+      commandLine 'su', '-s', '/bin/bash','-c', 'composer install --no-interaction'
     }
     try {
       exec {
         workingDir '.'
-        commandLine 'su', '-s', '/bin/bash', '-c', 'bin/console doctrine:schema:create', '--', 'www-data'
+        commandLine 'su', '-s', '/bin/bash', '-c', 'bin/console doctrine:schema:create'
       }
       try {
         exec {
           workingDir '.'
-          commandLine 'su', '-s', '/bin/bash', '-c', 'bin/console doctrine:migrations:migrate --allow-no-migration --no-interaction', '--', 'www-data'
+          commandLine 'su', '-s', '/bin/bash', '-c', 'bin/console doctrine:migrations:migrate --allow-no-migration --no-interaction'
         }
       } catch (Exception exception) {
         System.out.println("Something failed executing bin/console doctrine:migrations:migrate --allow-no-migration --no-interaction")
@@ -83,7 +83,7 @@ task createInitialUsers() {
     try{
       exec{
         workingDir '.'
-        commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:security-and-acl:create-initial-users','--','www-data'
+        commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:security-and-acl:create-initial-users'
       }
     }catch(Exception e){}
   }

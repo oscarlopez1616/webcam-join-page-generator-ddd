@@ -28,7 +28,7 @@ defaultTasks 'initReadModelConnection', 'initEventStoreConnection', 'createReadM
 ext.copyEnvFile = {
   exec {
     workingDir '.'
-    commandLine 'su','-s','/bin/bash','-c','cp .env.dist .env', '--', 'www-data'
+    commandLine 'su','-s','/bin/bash','-c','cp .env.dist .env'
   }
 }
 
@@ -152,7 +152,7 @@ task createAuditorFrameworkEventStreams{
   doFirst {
     exec{
       workingDir '.'
-      commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:event-stream:create' ,'--', 'www-data'
+      commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:event-stream:create'
     }
 
     ResultSet rs = executeQuery(
@@ -269,12 +269,12 @@ task resetAll() {
 
     exec{
       workingDir '.'
-      commandLine 'su', '-s', '/bin/bash','-c','bin/console d:s:u --force','--','www-data'
+      commandLine 'su', '-s', '/bin/bash','-c','bin/console d:s:u --force'
     }
 
     exec{
       workingDir '.'
-      commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:event-stream:create','--','www-data'
+      commandLine 'su', '-s', '/bin/bash','-c','bin/console auditor_framework:event-stream:create'
     }
 
     String[] readModelQueries = [
@@ -314,7 +314,7 @@ task resetAllRabbitQueues{
     for (String command : commands) {
       exec {
         workingDir '.'
-        commandLine 'su', '-s', '/bin/bash','-c', command, '--', 'www-data'
+        commandLine 'su', '-s', '/bin/bash','-c', command
       }
     }
   }
