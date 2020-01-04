@@ -16,7 +16,7 @@ composer.phar
 ###< symfony/phpunit-bridge ###
 
 .gradle/
-/src/Common/Module/SecurityAndAcl/Infrastructure/TrikoderOauth2/Keys/private.key
-/src/Common/Module/SecurityAndAcl/Infrastructure/TrikoderOauth2/Keys/public.key
+etc/oAuth2/key/private.key
+etc/oAuth2/key/private.key
 
 /etc/airflow/dags/__pycache__/
