@@ -17,6 +17,6 @@ composer.phar
 
 .gradle/
 etc/oAuth2/key/private.key
-etc/oAuth2/key/private.key
+etc/oAuth2/key/public.key
 
 /etc/airflow/dags/__pycache__/
