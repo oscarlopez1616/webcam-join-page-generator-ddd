@@ -32,9 +32,13 @@ security:
       pattern: ^/api/security_and_acl/user/([a-zA-Z0-9_\-\.]+).(\/)?$
       security: false
 
+    get_join_page:
+      pattern: ^/api/cam_landing_creator/join_page/([a-zA-Z0-9_\-\.]+).(\/)?.*$
+      security: false
+
     api:
       pattern: ^/api
-      security: false
+      security: true
       stateless: true
       oauth2: true
 
