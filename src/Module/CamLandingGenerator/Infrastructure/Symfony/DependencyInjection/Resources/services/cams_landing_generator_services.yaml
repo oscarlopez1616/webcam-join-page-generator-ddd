@@ -27,7 +27,7 @@ services:
   #FindJoinPageByAffiliateUrl
   WebCamScrapper\Module\CamLandingGenerator\Application\Query\FindJoinPageByAffiliateUrl\FindJoinPageByAffiliateUrlHandler:
     arguments:
-      $cache: "@app.cache.join_page"
+      $cache: "@.app.cache.join_page.taggable"
     tags:
       - {
           name: 'prooph_service_bus.auditor_framework_query_bus.route_target',

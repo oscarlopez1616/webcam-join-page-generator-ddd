@@ -38,6 +38,7 @@
         "scienta/doctrine-json-functions": "^4.0",
         "sensio/framework-extra-bundle": "^5.3",
         "signaturit/signaturit-sdk": "^1.1",
+        "symfony/cache": "~4.3",
         "symfony/console": "^4.3",
         "symfony/flex": "^1.2",
         "symfony/framework-bundle": "^4.3",

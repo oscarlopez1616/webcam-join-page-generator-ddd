@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection;
 
-use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitProjector;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
 use Exception;
@@ -11,6 +10,7 @@ use Prooph\EventStore\Projection\AbstractReadModel;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\Uuid;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitProjector;
 
 class MysqlCamUnitProjector extends AbstractReadModel implements CamUnitProjector
 {
@@ -124,18 +124,7 @@ class MysqlCamUnitProjector extends AbstractReadModel implements CamUnitProjecto
 
         $affiliates = $this->connection->executeQuery("select id from cam_landing_generator_affiliate;")->fetchAll();
 
-        foreach ($affiliates as $affiliate) {
-            $page=0;
-            $deleteCaheItemsFlag = true;
-            while ($deleteCaheItemsFlag){
-                if($this->cache->hasItem((urlencode($affiliate['id']).$page))){
-                    $this->cache->deleteItem(urlencode($affiliate['id']).$page);
-                    $page++;
-                }else{
-                    $deleteCaheItemsFlag = false;
-                }
-            }
-        }
+        $this->cache->invalidateTags(['joinPage']);
 
     }
 

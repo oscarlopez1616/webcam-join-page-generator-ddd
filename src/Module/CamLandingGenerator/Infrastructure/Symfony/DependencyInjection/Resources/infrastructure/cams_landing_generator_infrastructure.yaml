@@ -15,7 +15,7 @@ services:
   WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector:
     arguments:
       $connection: '@doctrine.dbal.default_connection'
-      $cache: "@app.cache.join_page"
+      $cache: "@.app.cache.join_page.taggable"
 
   WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\ProophCamUnitProjection:
     tags:
