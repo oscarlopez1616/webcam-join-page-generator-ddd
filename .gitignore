@@ -1,9 +1,6 @@
 var
 vendor
 .gradle
-gradle
-gradlew
-gradlew.bat
 composer.phar
 .idea
 .project
