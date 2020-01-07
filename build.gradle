@@ -336,18 +336,15 @@ task resetAllRabbitQueues{
 task launchTaskRunners(){
 
     doLast{
-      String[] commands = [
-        "auditor_framework:task_runner:keep_updated_cam_unit_by_id 12836da8-0c46-491b-a1b2-85188f0c8b7a"
-      ]
-      while(true){
-        for (String command : commands) {
-          exec {
+
+        while(true){
+            exec {
             workingDir '.'
-            commandLine 'bin/console', command
-          }
+            commandLine 'bin/console', "auditor_framework:task_runner:keep_updated_cam_unit_by_id", "12836da8-0c46-491b-a1b2-85188f0c8b7a"
+            }
+
+            sleep(900000)
         }
-        sleep(900000)
-    }
   }
 
 }
