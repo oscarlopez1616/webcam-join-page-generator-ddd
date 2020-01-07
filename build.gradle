@@ -337,7 +337,7 @@ task launchTaskRunners(){
 
     doLast{
       String[] commands = [
-        "auditor_framework:task_runner:keep_updated_cam_unit_by_id"
+        "auditor_framework:task_runner:keep_updated_cam_unit_by_id 12836da8-0c46-491b-a1b2-85188f0c8b7a"
       ]
       while(true){
         for (String command : commands) {

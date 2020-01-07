@@ -15,13 +15,12 @@ docker-compose up -d
 ```bash
 docker-compose exec php bash
 ```
-```bash
-bin/console auditor_framework:security-and-acl:create-initial-users
-```
 
 ```bash
-./gradlew
+./gradlew launchTaskRunners
 ```
+
+# Launch post to create Affiliate
 
 # To Run Projections:
 Running this projection is only allowed Afterwards we have deleted all content of the readModel

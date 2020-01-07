@@ -40,16 +40,19 @@ class CreateCamUnitHandler implements CommandHandler
      */
     public function __invoke(Command $command): void
     {
-        try{
+        try {
             /**
              * @var CamUnit $camUnit
              */
-            $camUnit = $this->writeModelRepository->findEventByAggregateId(new CamUnitId($command->id()));
+            $camUnit = $this->writeModelRepository->findEventByAggregateId(
+                new CamUnitId($command->id()),
+                CamUnit::class
+            );
 
             $camUnit->updateAggregate($this->camContentAdapter->camContents());
 
             $this->writeModelRepository->save([$camUnit]);
-        }catch (AggregateRootNotFoundInEventStoreException $e){
+        } catch (AggregateRootNotFoundInEventStoreException $e) {
             $camUnit = CamUnit::create(
                 new CamUnitId($command->id()),
                 $this->camContentAdapter->camContents()
