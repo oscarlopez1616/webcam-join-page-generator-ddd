@@ -19,9 +19,12 @@ docker-compose exec php bash
 ```bash
 ./gradlew launchTaskRunners
 ```
-# Launch post to create Affiliate
+# Execute CreateAffiliate endpoint in order to create Affiliate 
+the endpoint is: http://localhost:80/api/cam_landing_creator/affiliate/
 
-# To Run Projections:
+is needed to authenticate using Oauth2 using superadmin@auditor-framework.com account
+
+#Run Projections:
 Running this projection is only allowed Afterwards we have deleted all content of the readModel
 ```bash
 symfony event-store:projection:run cam_landing_generator_affiliate_projection -o
@@ -29,3 +32,6 @@ symfony event-store:projection:run cam_landing_generator_affiliate_projection -o
 ```bash
 symfony event-store:projection:run cam_landing_generator_cam_unit_projection -o
 ```
+
+# Execute GetJoinPage endpoint in order to create Affiliate 
+the endpoint is: http://localhost:80/api/cam_landing_creator/join_page/www.buscando-novia.com/0/
