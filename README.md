@@ -16,6 +16,10 @@ docker-compose up -d
 docker-compose exec php bash
 ```
 ```bash
+bin/console auditor_framework:security-and-acl:create-initial-users
+```
+
+```bash
 ./gradlew
 ```
 

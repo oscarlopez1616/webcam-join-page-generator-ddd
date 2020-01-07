@@ -3,11 +3,12 @@ declare(strict_types=1);
 
 namespace WebCamScrapper\Module\CamLandingGenerator\Domain;
 
-use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
-use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
-use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 use Doctrine\ORM\PersistentCollection;
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\AggregateRoot;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasUpdatedEvent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitContent;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 
 class CamUnit extends AggregateRoot
 {
@@ -47,6 +48,27 @@ class CamUnit extends AggregateRoot
         $this->updatedAt = $event->updatedAt();
         $this->camUnitsContent = $event->camUnitsContent();
     }
+
+    /**
+     * @param CamUnitContent[] $camUnitsContent
+     */
+    public function updateAggregate( array $camUnitsContent){
+        $this->recordThat(
+            new CamUnitWasUpdatedEvent(
+                $this->id(),
+                $camUnitsContent
+            )
+        );
+    }
+
+    /** @noinspection PhpUnused */
+    public function applyCamUnitWasUpdatedEvent(CamUnitWasUpdatedEvent $event)
+    {
+        $this->updatedAt = $event->updatedAt();
+        $this->camUnitsContent = $event->camUnitsContent();
+    }
+
+
 
     protected function getChildEntities(): array
     {

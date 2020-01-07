@@ -1,10 +1,6 @@
 oauth2:
   resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'
 
-cam_unit_controller:
-  prefix: /api/cam_landing_creator/cam_unit
-  resource: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController
-
 affiliate_controller:
   prefix: /api/cam_landing_creator/affiliate
   resource: WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController

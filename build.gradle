@@ -104,6 +104,7 @@ task initEventStoreConnection {
   }
 }
 
+
 task fixOauth2Tables() {
   description 'Fix oauth2_client.identifier to CHAR(36) in order to be able to store Uuids'
 
@@ -336,9 +337,7 @@ task launchTaskRunners(){
 
     doLast{
       String[] commands = [
-        "auditor_framework:task_runner:activate_all_activable_loans",
-        "auditor_framework:task_runner:choose_selectable_loans",
-        "auditor_framework:task_runner:sign_all_contracts_signed_in_bs"
+        "auditor_framework:task_runner:keep_updated_cam_unit_by_id"
       ]
       while(true){
         for (String command : commands) {
@@ -347,7 +346,7 @@ task launchTaskRunners(){
             commandLine 'bin/console', command
           }
         }
-        sleep(1000)
+        sleep(900000)
     }
   }
 

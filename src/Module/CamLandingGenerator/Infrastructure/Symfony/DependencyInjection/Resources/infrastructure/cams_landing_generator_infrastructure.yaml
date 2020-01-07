@@ -48,3 +48,7 @@ services:
   WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineCamUnitReadModelRepository:
     arguments:
       - '@doctrine.orm.entity_manager'
+
+  #Command Cli
+  WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Cli\TaskRunner\KeepUpdatedCamUnitById:
+    tags: ['console.command']

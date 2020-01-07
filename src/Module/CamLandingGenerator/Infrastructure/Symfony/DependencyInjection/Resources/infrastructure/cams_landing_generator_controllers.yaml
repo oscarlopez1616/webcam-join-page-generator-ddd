@@ -1,11 +1,4 @@
 services:
-  WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\CamUnitController:
-    public: true
-    autowire: true
-    arguments:
-      $commandBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus'
-      $queryBus: '@TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\QueryBus'
-      $serializer: '@jms_serializer'
 
   WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Ui\Http\Rest\Controller\AffiliateController:
     public: true

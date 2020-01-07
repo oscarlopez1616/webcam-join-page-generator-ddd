@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit;
+namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\KeepUpdatedCamUnitById;
 
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\Command;

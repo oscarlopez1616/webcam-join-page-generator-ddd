@@ -8,26 +8,26 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.130.3",
+            "version": "3.131.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "916356edb5c30fa564d02de94bde51a9c0bb4469"
+                "reference": "371ca02855c92c13e36fa5f6d38e68211354c979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/916356edb5c30fa564d02de94bde51a9c0bb4469",
-                "reference": "916356edb5c30fa564d02de94bde51a9c0bb4469",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/371ca02855c92c13e36fa5f6d38e68211354c979",
+                "reference": "371ca02855c92c13e36fa5f6d38e68211354c979",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
-                "guzzlehttp/guzzle": "^5.3.3|^6.2.1",
-                "guzzlehttp/promises": "~1.0",
+                "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0",
+                "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.4.1",
-                "mtdowling/jmespath.php": "~2.2",
+                "mtdowling/jmespath.php": "^2.5",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -88,7 +88,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-01-02T19:13:50+00:00"
+            "time": "2020-01-06T19:10:20+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -3815,12 +3815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarlopez1616/auditor-framework.git",
-                "reference": "e14aa0e241f4c89012b9a19846e05e9d2bc79b20"
+                "reference": "5d89e90754999b38c85c1b94f4d85b19aec50dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/e14aa0e241f4c89012b9a19846e05e9d2bc79b20",
-                "reference": "e14aa0e241f4c89012b9a19846e05e9d2bc79b20",
+                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/5d89e90754999b38c85c1b94f4d85b19aec50dc0",
+                "reference": "5d89e90754999b38c85c1b94f4d85b19aec50dc0",
                 "shasum": ""
             },
             "require": {
@@ -3877,7 +3877,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "11-dev"
+                    "dev-master": "14-dev"
                 },
                 "symfony": {
                     "allow-contrib": true
@@ -3893,7 +3893,7 @@
                 "AGPL-3.0-or-later"
             ],
             "description": "Auditor Framework preAlpha version to get a Production version go to TheCodeFigthers",
-            "time": "2020-01-04T19:52:55+00:00"
+            "time": "2020-01-07T15:59:23+00:00"
         },
         {
             "name": "paragonie/random_compat",

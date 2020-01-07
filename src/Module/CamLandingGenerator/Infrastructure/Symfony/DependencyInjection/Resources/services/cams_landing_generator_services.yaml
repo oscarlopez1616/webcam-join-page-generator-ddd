@@ -9,11 +9,11 @@ services:
   WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\CamUnitReadModelRepository: '@WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Doctrine\DoctrineCamUnitReadModelRepository'
 
   #CreateCamUnit
-  WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitHandler:
+  WebCamScrapper\Module\CamLandingGenerator\Application\Command\KeepUpdatedCamUnitById\CreateCamUnitHandler:
     tags:
       - {
           name: 'prooph_service_bus.auditor_framework_command_bus.route_target',
-          message: WebCamScrapper\Module\CamLandingGenerator\Application\Command\CreateCamUnit\CreateCamUnitCommand
+          message: WebCamScrapper\Module\CamLandingGenerator\Application\Command\KeepUpdatedCamUnitById\CreateCamUnitCommand
        }
 
   #CreateAffiliate
