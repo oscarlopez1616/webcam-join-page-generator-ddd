@@ -3815,12 +3815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarlopez1616/auditor-framework.git",
-                "reference": "5d89e90754999b38c85c1b94f4d85b19aec50dc0"
+                "reference": "41fa4fb23552238afd9aadde568c7fde8403f3e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/5d89e90754999b38c85c1b94f4d85b19aec50dc0",
-                "reference": "5d89e90754999b38c85c1b94f4d85b19aec50dc0",
+                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/41fa4fb23552238afd9aadde568c7fde8403f3e0",
+                "reference": "41fa4fb23552238afd9aadde568c7fde8403f3e0",
                 "shasum": ""
             },
             "require": {
@@ -3877,7 +3877,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "14-dev"
+                    "dev-master": "16-dev"
                 },
                 "symfony": {
                     "allow-contrib": true
@@ -3893,7 +3893,7 @@
                 "AGPL-3.0-or-later"
             ],
             "description": "Auditor Framework preAlpha version to get a Production version go to TheCodeFigthers",
-            "time": "2020-01-07T15:59:23+00:00"
+            "time": "2020-01-07T18:19:03+00:00"
         },
         {
             "name": "paragonie/random_compat",

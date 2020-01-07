@@ -19,7 +19,6 @@ docker-compose exec php bash
 ```bash
 ./gradlew launchTaskRunners
 ```
-
 # Launch post to create Affiliate
 
 # To Run Projections:

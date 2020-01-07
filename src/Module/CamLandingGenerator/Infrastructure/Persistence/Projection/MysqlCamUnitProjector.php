@@ -122,18 +122,27 @@ class MysqlCamUnitProjector extends AbstractReadModel implements CamUnitProjecto
             );
         }
 
-        $affiliates = $this->connection->executeQuery("select id from cam_landing_generator_affiliate;")->fetchAll();
-
         $this->cache->invalidateTags(['joinPage']);
 
     }
 
-
+    /**
+     * @param array $data
+     * @param array $id
+     * @throws DBALException
+     * @throws Exception
+     */
     public function update(array $data, array $id)
     {
-        /**
-         * TODO
-         */
+        $dataCopy = $data;
+        unset($dataCopy['0']);
+
+        foreach ($data['0']['cam_units'] as $camUnitContent){
+            $camUnitContent['id'] = Uuid::create()->value();
+            $this->connection->update('cam_landing_generator_cam_unit_content', $camUnitContent,$id);
+        }
+
+        $this->cache->invalidateTags([('joinPage'.'-'.$id['id'])]);
     }
 
 }

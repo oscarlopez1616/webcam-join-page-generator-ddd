@@ -76,10 +76,9 @@ class FindJoinPageByAffiliateUrlHandler implements QueryHandler
 
             if(count($queryResult->camUnitContentWithAffiliateDataDto()) !== 0){
                 $messageCached->set($queryResult);
-                $messageCached->tag(['joinPage']);
+                $messageCached->tag([('joinPage'.'-'.$camUnit->id()->value())]);
                 $this->cache->save($messageCached);
             }
-
         }
 
         $deferred->resolve($queryResult);
