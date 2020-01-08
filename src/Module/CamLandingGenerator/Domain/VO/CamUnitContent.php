@@ -241,10 +241,6 @@ class CamUnitContent extends ValueObject
     }
 
 
-    private function guard(string $value): void
-    {
-    }
-
     public function wbmerTwitter(): WbmerTwitter
     {
         return $this->wbmerTwitter;
@@ -383,7 +379,9 @@ class CamUnitContent extends ValueObject
      */
     protected function equalValues(ValueObject $o): bool
     {
-        return $this->value() === $o->value();
+        /**
+         * TODO
+         */
     }
 
 }

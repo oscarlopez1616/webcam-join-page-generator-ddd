@@ -5,11 +5,10 @@ namespace WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\P
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
-use Exception;
-use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\AffiliateProjector;
 use Prooph\EventStore\Projection\AbstractReadModel;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException;
+use WebCamScrapper\Module\CamLandingGenerator\Domain\ReadModel\AffiliateProjector;
 
 class MysqlAffiliateProjector extends AbstractReadModel implements AffiliateProjector
 {

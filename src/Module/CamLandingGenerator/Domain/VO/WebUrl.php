@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace WebCamScrapper\Module\CamLandingGenerator\Domain\VO;
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\Id;
-use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain\ValueObject;
 
 class WebUrl extends Id
 {

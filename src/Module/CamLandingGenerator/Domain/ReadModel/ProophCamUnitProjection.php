@@ -6,7 +6,7 @@ use Prooph\Bundle\EventStore\Projection\ReadModelProjection;
 use Prooph\EventStore\Projection\ReadModelProjector;
 use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasCreatedEvent;
 use WebCamScrapper\Module\CamLandingGenerator\Domain\Event\CamUnitWasUpdatedEvent;
-use WebCamScrapper\Module\Financial\Infrastructure\Persistence\Projection\MysqlLoanReadModel;
+use WebCamScrapper\Module\CamLandingGenerator\Infrastructure\Persistence\Projection\MysqlCamUnitProjector;
 
 /**
  * @method readModel()
@@ -19,7 +19,7 @@ class ProophCamUnitProjection implements ReadModelProjection
             ->when(
                 [
                     CamUnitWasCreatedEvent::class => function ($state, CamUnitWasCreatedEvent $event) {
-                        /** @var MysqlLoanReadModel $readModel */
+                        /** @var MysqlCamUnitProjector $readModel */
                         $this->readModel()->stack(
                             'insert',
                             [
@@ -33,7 +33,7 @@ class ProophCamUnitProjection implements ReadModelProjection
                         return $state;
                     },
                     CamUnitWasUpdatedEvent::class => function ($state, CamUnitWasUpdatedEvent $event) {
-                        /** @var MysqlLoanReadModel $readModel */
+                        /** @var MysqlCamUnitProjector $readModel */
                         $this->readModel()->stack(
                             'update',
                             [

@@ -8,8 +8,6 @@ use function Lambdish\Phunctional\map;
 
 class CamUnitThumb extends ValueObject
 {
-    private const ALLOWED_PHOTOS = 4;
-
     /**
      * @var WbmerThumb
      */

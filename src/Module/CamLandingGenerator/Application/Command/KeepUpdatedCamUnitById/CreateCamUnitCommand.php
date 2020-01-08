@@ -5,7 +5,6 @@ namespace WebCamScrapper\Module\CamLandingGenerator\Application\Command\KeepUpda
 
 
 use TheCodeFighters\Bundle\AuditorFramework\Common\Types\Application\CommandBus\Command;
-use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 
 final class CreateCamUnitCommand implements Command
 {
