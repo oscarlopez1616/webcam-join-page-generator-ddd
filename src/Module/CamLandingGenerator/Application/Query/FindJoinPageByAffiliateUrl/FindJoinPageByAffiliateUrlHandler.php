@@ -66,7 +66,7 @@ class FindJoinPageByAffiliateUrlHandler implements QueryHandler
                 $affiliateId
             );
 
-            $camUnit = $this->camUnitReadModelRepository->findOrNewestCamUnit();
+            $camUnit = $this->camUnitReadModelRepository->findOrFailNewestCamUnit();
 
             $queryResult = $this->joinPageAssembler->toDto(
                 $affiliate,

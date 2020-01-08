@@ -7,5 +7,5 @@ use WebCamScrapper\Module\CamLandingGenerator\Domain\CamUnit;
 
 interface CamUnitReadModelRepository
 {
-    public function findOrNewestCamUnit(): CamUnit;
+    public function findOrFailNewestCamUnit(): CamUnit;
 }

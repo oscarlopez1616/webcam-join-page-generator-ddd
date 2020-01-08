@@ -21,7 +21,7 @@ class DoctrineCamUnitReadModelRepository implements CamUnitReadModelRepository
         $this->entityManager = $entityManager;
     }
 
-    public function findOrNewestCamUnit(): CamUnit
+    public function findOrFailNewestCamUnit(): CamUnit
     {
 
         $query = $this->entityManager
