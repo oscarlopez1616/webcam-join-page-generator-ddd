@@ -13,7 +13,7 @@ use WebCamScrapper\Module\CamLandingGenerator\Domain\VO\CamUnitId;
 class CamUnit extends AggregateRoot
 {
     /**
-     * @var CamUnit[]|PersistentCollection
+     * @var CamUnitContent[]|PersistentCollection
      */
     private $camUnitsContent;
 

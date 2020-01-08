@@ -42,8 +42,8 @@ class CamUnitThumb extends ValueObject
         array $wbmerThumbs
     ): self {
 
-        $wbmerThumbBig = $wbmerThumbs[0];
-        unset($wbmerThumbs[0]);
+        $wbmerThumbBig = $wbmerThumbs[3];
+        unset($wbmerThumbs[3]);
 
         return new self(
             new WbmerThumb($wbmerThumbBig),
