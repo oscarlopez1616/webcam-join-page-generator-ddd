@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "712b9080-1c90-4240-82c6-027b7c36af7a",
+		"name": "TechPump",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "Affiliate",
+					"item": [
+						{
+							"name": "CreateAffiliate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"www.babosas.com\",\n\t\"affiliate_name\": \"babosas.com\",\n\t\"affiliate_url\": \"https://www.babosas.com\",\n\t\"cum_louder_tracking_code\": \"123456\",\n\t\"cum_louder_web_cams_tracking_code\": \"12345678\",\n\t\"css_path\": \"babosas\",\n\t\"analytics_code\": \"UA-276543\"\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/cam_landing_creator/affiliate/?{{flag_xdebug}}",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"cam_landing_creator",
+										"affiliate",
+										""
+									],
+									"query": [
+										{
+											"key": "{{flag_xdebug}}",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "JoinPage",
+					"item": [
+						{
+							"name": "GetJoinPage",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/cam_landing_creator/join_page/www.babosas.com/0/?{{flag_xdebug}}",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"cam_landing_creator",
+										"join_page",
+										"www.babosas.com",
+										"0",
+										""
+									],
+									"query": [
+										{
+											"key": "{{flag_xdebug}}",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyYmE2YTk5ODcyMDI3ODYyN2IxZjUxOGY2YjVmNWZiZmQ5ZWRhYWRkZjY4ZjE0OWQwZjEzZTMyOTllODliNDViYWE3OGRjMmU2ZWI4OTVhIn0.eyJhdWQiOiIyYTlhYzA2Mi1lOTRlLTRlMmQtYTUxNC1mMjYyMGY5NDAwOWUiLCJqdGkiOiI0MmJhNmE5OTg3MjAyNzg2MjdiMWY1MThmNmI1ZjVmYmZkOWVkYWFkZGY2OGYxNDlkMGYxM2UzMjk5ZTg5YjQ1YmFhNzhkYzJlNmViODk1YSIsImlhdCI6MTU3ODQ1MDg4MCwibmJmIjoxNTc4NDUwODgwLCJleHAiOjE1ODExMjkyODAsInN1YiI6InN1cGVyYWRtaW5AYXVkaXRvci1mcmFtZXdvcmsuY29tIiwic2NvcGVzIjpbXX0.Clm04o66IUV61FGt1d47QFeLc0FdE6H25Xlg9DA6yPkoPxBBlW82gstVv8godrl5tfLbHhxwIfIdEskbgb6Zlkv6WKFZQq0QCfmhe05YrGDmGc9FJrY4ziusZ2GXpEhLIi0OUhxndO5q0rJce72AyAOLV-73GBfeVPVm6qv3JHZNduMxZdvE4USTfLw2ftIrY81vasGHwknuvbPIjTn7zTr9Md3qtXBnj85X6hOiKlW0Optr3pNw270s2De7bORAqlGq-4LA2TD2U-DawMC7ugtX8UAridFiBLYhG1-i2fCCg_G63T70HgvWoQt7FB8_R78ddUv4dHg2g3d3OBXQew",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "58b23e3f-6c53-4815-bffb-1fb87aa8cfef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dfd43092-cbd6-4ec9-9fb6-01392eaa0baf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
