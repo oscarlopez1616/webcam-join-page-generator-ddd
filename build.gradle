@@ -314,25 +314,6 @@ task resetAll() {
   }
 }
 
-task resetAllRabbitQueues{
-  doLast{
-    String RABBITMQ_HOST = dotenv.get('RABBITMQ_HOST')
-    String RABBITMQ_USER = dotenv.get('RABBITMQ_USER')
-    String RABBITMQ_PASSWORD = dotenv.get('RABBITMQ_PASSWORD')
-
-    String[] commands = [
-      "rabbitmqadmin purge queue name=sync_and_integration.basic_unit.crm  -u${RABBITMQ_USER} -p${RABBITMQ_PASSWORD} --host=${RABBITMQ_HOST} --port=15672"
-    ]
-
-    for (String command : commands) {
-      exec {
-        workingDir '.'
-        commandLine 'su', '-s', '/bin/bash','-c', command
-      }
-    }
-  }
-}
-
 task launchTaskRunners(){
 
     doLast{
@@ -356,6 +337,5 @@ createReadModelSchema.finalizedBy fixOauth2Tables
 resetAll.dependsOn initReadModelConnection
 resetAll.dependsOn initEventStoreConnection
 resetAll.finalizedBy fixEventStream
-resetAll.finalizedBy resetAllRabbitQueues
 resetAll.finalizedBy fixOauth2Tables
 resetAll.finalizedBy createInitialUsers

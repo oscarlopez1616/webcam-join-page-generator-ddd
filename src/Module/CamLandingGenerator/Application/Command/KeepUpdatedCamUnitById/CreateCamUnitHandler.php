@@ -44,7 +44,7 @@ class CreateCamUnitHandler implements CommandHandler
             /**
              * @var CamUnit $camUnit
              */
-            $camUnit = $this->writeModelRepository->findEventByAggregateId(
+            $camUnit = $this->writeModelRepository->findAggregateByAggregateId(
                 new CamUnitId($command->id()),
                 CamUnit::class
             );

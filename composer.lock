@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.131.0",
+            "version": "3.132.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "371ca02855c92c13e36fa5f6d38e68211354c979"
+                "reference": "d1ea3332539a07d122e5cf397c0eb3a1fb75eede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/371ca02855c92c13e36fa5f6d38e68211354c979",
-                "reference": "371ca02855c92c13e36fa5f6d38e68211354c979",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d1ea3332539a07d122e5cf397c0eb3a1fb75eede",
+                "reference": "d1ea3332539a07d122e5cf397c0eb3a1fb75eede",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-01-06T19:10:20+00:00"
+            "time": "2020-01-07T19:13:51+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -3815,12 +3815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarlopez1616/auditor-framework.git",
-                "reference": "41fa4fb23552238afd9aadde568c7fde8403f3e0"
+                "reference": "1d128c07b2c610c153eb1e92a4b0c907b6435624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/41fa4fb23552238afd9aadde568c7fde8403f3e0",
-                "reference": "41fa4fb23552238afd9aadde568c7fde8403f3e0",
+                "url": "https://api.github.com/repos/oscarlopez1616/auditor-framework/zipball/1d128c07b2c610c153eb1e92a4b0c907b6435624",
+                "reference": "1d128c07b2c610c153eb1e92a4b0c907b6435624",
                 "shasum": ""
             },
             "require": {
@@ -3877,7 +3877,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "16-dev"
+                    "dev-master": "17-dev"
                 },
                 "symfony": {
                     "allow-contrib": true
@@ -3893,7 +3893,7 @@
                 "AGPL-3.0-or-later"
             ],
             "description": "Auditor Framework preAlpha version to get a Production version go to TheCodeFigthers",
-            "time": "2020-01-07T18:19:03+00:00"
+            "time": "2020-01-08T13:07:02+00:00"
         },
         {
             "name": "paragonie/random_compat",
