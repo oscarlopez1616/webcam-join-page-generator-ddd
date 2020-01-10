@@ -36,7 +36,7 @@ doctrine:
           collate: utf8mb4_unicode_ci
     types:
       Uuid: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Persistence\Doctrine\Type\DoctrineUuid
-      id: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Persistence\Doctrine\Type\DoctrineId
+      Id: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Infrastructure\Persistence\Doctrine\Type\DoctrineId
       UserId: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrineUserId
       Roles: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrineRoles
       PasswordRecoveryId: TheCodeFighters\Bundle\AuditorFramework\Common\Module\SecurityAndAcl\Infrastructure\Persistence\Doctrine\Type\DoctrinePasswordRecoveryId
@@ -54,6 +54,11 @@ doctrine:
         JSON_SEARCH: Scienta\DoctrineJsonFunctions\Query\AST\Functions\Mysql\JsonSearch
     mappings:
       Common:
+        type: yml
+        dir: '%kernel.project_dir%/vendor/oscarlopez1616/auditor-framework/src/Common/Module/EventStore/Infrastructure/Persistence/Doctrine/Mapping'
+        prefix: TheCodeFighters\Bundle\AuditorFramework\Common\EventStore\Domain
+        is_bundle: false
+      EventStore:
         type: yml
         dir: '%kernel.project_dir%/vendor/oscarlopez1616/auditor-framework/src/Common/Types/Infrastructure/Persistence/Doctrine/Mapping'
         prefix: TheCodeFighters\Bundle\AuditorFramework\Common\Types\Domain
