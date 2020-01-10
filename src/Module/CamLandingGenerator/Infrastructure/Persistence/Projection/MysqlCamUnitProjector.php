@@ -122,7 +122,7 @@ class MysqlCamUnitProjector extends AbstractReadModel implements CamUnitProjecto
             );
         }
 
-        $this->cache->invalidateTags(['joinPage']);
+        $this->cache->invalidateTags([('joinPage'.'-'.$data['id'])]);
 
     }
 
