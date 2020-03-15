@@ -67,9 +67,6 @@ class MysqlAffiliateProjector extends AbstractReadModel implements AffiliateProj
      */
     public function reset(): void
     {
-        $this->disableForeignKeys();
-        $this->connection->executeQuery("TRUNCATE TABLE auditor_framework.risk_borrower_bank_reader;");
-        $this->enableForeignKeys();
     }
 
     /**
